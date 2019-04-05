@@ -6,7 +6,7 @@ from django.urls import path
 from .graphql import schema
 
 
-graphql_server = GraphQL(schema)
+graphql_server = GraphQL(schema, debug=True)
 
 application = ProtocolTypeRouter({
     'http': URLRouter([
