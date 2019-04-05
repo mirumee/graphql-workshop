@@ -1,17 +1,18 @@
 import json
-from ariadne import format_errors, format_error
+from ariadne import graphql_sync
 from ariadne.constants import PLAYGROUND_HTML
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from graphql import graphql_sync
+
+from .graphql import schema
 
 
 def show_playground(request):
     return HttpResponse(PLAYGROUND_HTML)
 
 
-def graphql_executor(request, schema):
+def graphql_executor(request):
     # Reject requests that aren't JSON
     if request.content_type != "application/json":
         return HttpResponseBadRequest()
@@ -22,37 +23,21 @@ def graphql_executor(request, schema):
     except ValueError:
         return HttpResponseBadRequest()
 
-    # Check if instance data is not empty and dict
-    if not data or not isinstance(data, dict):
-        return HttpResponseBadRequest()
-
-    # Check if variables are dict:
-    variables = data.get("variables")
-    if variables and not isinstance(variables, dict):
-        return HttpResponseBadRequest()
-
     # Execute the query
-    result = graphql_sync(
+    success, result = graphql_sync(
         schema,
-        data.get("query"),
+        data,
         context_value=request,  # expose request as info.context
-        variable_values=data.get("variables"),
-        operation_name=data.get("operationName"),
+        debug=settings.DEBUG,
     )
 
-    # Build valid GraphQL API response
-    status_code = 200
-    response = {"data": result.data}
-    if result.errors:
-        status_code = 400
-        response["errors"] = format_errors(result, format_error, debug=settings.DEBUG)
-
+    status_code = 200 if success else 400
     # Send response to client
-    return JsonResponse(response, status=status_code)
+    return JsonResponse(result, status=status_code)
 
 
 @csrf_exempt
-def graphql_server(request, schema):
+def graphql_view(request):
     if request.method == "GET":
         return show_playground(request)
-    return graphql_executor(request, schema)
+    return graphql_executor(request)
