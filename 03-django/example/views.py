@@ -8,16 +8,17 @@ from django.views.decorators.csrf import csrf_exempt
 from .graphql import schema
 
 
-def show_playground(request):
-    return HttpResponse(PLAYGROUND_HTML)
+@csrf_exempt
+def graphql_view(request):
+    if request.method == "GET":
+        return HttpResponse(PLAYGROUND_HTML)
 
+    if request.method != "POST":
+        return HttpResponseBadRequest()
 
-def graphql_executor(request):
-    # Reject requests that aren't JSON
     if request.content_type != "application/json":
         return HttpResponseBadRequest()
 
-    # Naively read data from JSON request
     try:
         data = json.loads(request.body)
     except ValueError:
@@ -34,10 +35,3 @@ def graphql_executor(request):
     status_code = 200 if success else 400
     # Send response to client
     return JsonResponse(result, status=status_code)
-
-
-@csrf_exempt
-def graphql_view(request):
-    if request.method == "GET":
-        return show_playground(request)
-    return graphql_executor(request)
