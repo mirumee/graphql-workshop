@@ -38,4 +38,4 @@ def resolve_add(*_, a: int, b: int):
 schema = make_executable_schema(type_defs, [query, mutation])
 
 # Create the ASGI app
-app = GraphQL(schema)
+app = GraphQL(schema, debug=True)

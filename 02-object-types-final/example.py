@@ -46,4 +46,4 @@ def resolve_book_age(book, *_):
 schema = make_executable_schema(type_defs, [query, book])
 
 # Create the ASGI app
-app = GraphQL(schema)
+app = GraphQL(schema, debug=True)
