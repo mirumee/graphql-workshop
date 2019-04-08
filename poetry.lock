@@ -12,10 +12,11 @@ description = "Ariadne is a Python library for implementing GraphQL servers."
 name = "ariadne"
 optional = false
 python-versions = "*"
-version = "0.2.0"
+version = "0.3.0"
 
 [package.dependencies]
 graphql-core-next = ">=1.0.1"
+starlette = ">=0.11.4"
 typing = ">=3.6.0"
 typing-extensions = ">=3.6.0"
 
@@ -410,6 +411,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.3.0"
 
 [[package]]
+category = "main"
+description = "The little ASGI library that shines."
+name = "starlette"
+optional = false
+python-versions = ">=3.6"
+version = "0.11.4"
+
+[package.extras]
+full = ["aiofiles", "asyncpg", "graphene", "itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests", "ujson"]
+
+[[package]]
 category = "dev"
 description = "Python Library for Tom's Obvious, Minimal Language"
 name = "toml"
@@ -559,12 +571,12 @@ test = ["zope.event"]
 testing = ["zope.event", "nose", "coverage"]
 
 [metadata]
-content-hash = "f92df748dcac5e9d71ecc284454d47787b7721bcc0b3b40b2a4a9f0a9d1196d9"
+content-hash = "1f5b007c76529a1c3799cee1db6a65b59ca030fca4a8d0ee3f33a5a80fc7521b"
 python-versions = "^3.6"
 
 [metadata.hashes]
 appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e"]
-ariadne = ["92c189b5ddb7c31182d0934700c6485ace6bb96b75a43880f4ae21374ae222fc", "aab57955c1446f2ca50103bd536d3dbe8aa61030b00344c6d8d771dec5d05b5d"]
+ariadne = ["01ed4572ff9ee24c1b06f932e5516bcc2e2ba23d129fb5a0e9fe4a732eae74ad", "c4b30b6138c7a9b8f890e80aed1303ae82deef70c3b7c5f218f7b2d620e046e8"]
 asgiref = ["9b05dcd41a6a89ca8c6e7f7e4089c3f3e76b5af60aebb81ae6d455ad81989c97", "b21dc4c43d7aba5a844f4c48b8f49d56277bc34937fd9f9cb93ec97fde7e3082"]
 astroid = ["6560e1e1749f68c64a4b5dee4e091fce798d2f0d84ebe638cf0e0585a343acf4", "b65db1bbaac9f9f4d190199bb8680af6f6f84fd3769a5ea883df8a91fe68b4c4"]
 async-timeout = ["0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f", "4291ca197d287d274d0b6cb5d6f8f8f82d434ed288f962539ff18cc9012f9ea3"]
@@ -598,6 +610,7 @@ requests = ["502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e", 
 requests-oauthlib = ["bd6533330e8748e94bf0b214775fed487d309b8b8fe823dc45641ebcd9a32f57", "d3ed0c8f2e3bbc6b344fa63d6f933745ab394469da38db16bdddb461c7e25140", "dd5a0499abfefd087c6dd96693cbd5bfd28aa009719a7f85ab3fabe3956ef19a"]
 six = ["3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c", "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"]
 sqlparse = ["40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177", "7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"]
+starlette = ["7f2307d705b2d9ed584d98468616dee7625d4bc402ce841cc6fa3a863e162e8b"]
 toml = ["229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c", "235682dd292d5899d361a811df37e04a8828a5b1da3115886b73cf81ebc9100e", "f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"]
 twisted = ["294be2c6bf84ae776df2fc98e7af7d6537e1c5e60a46d33c3ce2a197677da395"]
 txaio = ["67e360ac73b12c52058219bb5f8b3ed4105d2636707a36a7cdafb56fe06db7fe", "b6b235d432cc58ffe111b43e337db71a5caa5d3eaa88f0eacf60b431c7626ef5"]
