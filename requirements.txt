@@ -1,6 +1,6 @@
-ariadne==0.2.0 \
-    --hash=sha256:92c189b5ddb7c31182d0934700c6485ace6bb96b75a43880f4ae21374ae222fc \
-    --hash=sha256:aab57955c1446f2ca50103bd536d3dbe8aa61030b00344c6d8d771dec5d05b5d
+ariadne==0.3.0 \
+    --hash=sha256:01ed4572ff9ee24c1b06f932e5516bcc2e2ba23d129fb5a0e9fe4a732eae74ad \
+    --hash=sha256:c4b30b6138c7a9b8f890e80aed1303ae82deef70c3b7c5f218f7b2d620e046e8
 asgiref==2.3.2 \
     --hash=sha256:9b05dcd41a6a89ca8c6e7f7e4089c3f3e76b5af60aebb81ae6d455ad81989c97 \
     --hash=sha256:b21dc4c43d7aba5a844f4c48b8f49d56277bc34937fd9f9cb93ec97fde7e3082
@@ -83,6 +83,8 @@ six==1.12.0 \
 sqlparse==0.3.0 \
     --hash=sha256:40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177 \
     --hash=sha256:7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873
+starlette==0.11.4 \
+    --hash=sha256:7f2307d705b2d9ed584d98468616dee7625d4bc402ce841cc6fa3a863e162e8b
 twisted==18.9.0 \
     --hash=sha256:294be2c6bf84ae776df2fc98e7af7d6537e1c5e60a46d33c3ce2a197677da395
 txaio==18.8.1 \
