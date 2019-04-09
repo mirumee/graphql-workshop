@@ -12,7 +12,6 @@ ariadne = "^0.3.0"
 django = "^2.2"
 django-channels = "^0.7.0"
 uvicorn = "^0.6.1"
-channels = "^2.1"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.3"
