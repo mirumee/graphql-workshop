@@ -8,10 +8,10 @@ authors = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
-ariadne = "^0.3.0"
+ariadne = "^0.5"
 django = "^2.2"
-django-channels = "^0.7.0"
-uvicorn = "^0.6.1"
+uvicorn = "^0.8"
+channels = "^2.2"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.3"
