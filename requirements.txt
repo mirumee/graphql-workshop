@@ -77,9 +77,9 @@ cryptography==2.7 \
 daphne==2.3.0 \
     --hash=sha256:2329b7a74b5559f7ea012879c10ba945c3a53df7d8d2b5932a904e3b4c9abcc2 \
     --hash=sha256:3cae286a995ae5b127d7de84916f0480cb5be19f81125b6a150b8326250dadd5
-django==2.2.2 \
-    --hash=sha256:753d30d3eb078064d2ddadfea65083c9848074a7f93d7b4dc7fa6b1380d278f5 \
-    --hash=sha256:7cb67e8b934fab23b6daed7144da52e8a25a47eba7f360ca43d2b448506b01ad
+django==2.2.3 \
+    --hash=sha256:4d23f61b26892bac785f07401bc38cbf8fa4cec993f400e9cd9ddf28fd51c0ea \
+    --hash=sha256:6e974d4b57e3b29e4882b244d40171d6a75202ab8d2402b8e8adbd182e25cf0c
 graphql-core-next==1.0.5 \
     --hash=sha256:5a6cdf23a3b24fa738a903b9fcdaa1db2768a6552f8d1fb8fb79d9add16d090d \
     --hash=sha256:c663ccc36d9a5ece606b5b4f5509835f0ec8d6e6b941992ced67384edcbfd045
