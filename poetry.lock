@@ -31,9 +31,6 @@ version = "3.1.2"
 [package.dependencies]
 async-timeout = ">=2.0,<4.0"
 
-[package.extras]
-tests = ["pytest (>=4.3.0,<4.4.0)", "pytest-asyncio (>=0.10.0,<0.11.0)"]
-
 [[package]]
 category = "main"
 description = "Fast ASN.1 parser and serializer with definitions for private keys, public keys, certificates, CRL, OCSP, CMS, PKCS#3, PKCS#7, PKCS#8, PKCS#12, PKCS#5, X.509 and TSP"
@@ -72,11 +69,6 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "19.1.0"
 
-[package.extras]
-dev = ["coverage", "hypothesis", "pympler", "pytest", "six", "zope.interface", "sphinx", "pre-commit"]
-docs = ["sphinx", "zope.interface"]
-tests = ["coverage", "hypothesis", "pympler", "pytest", "six", "zope.interface"]
-
 [[package]]
 category = "main"
 description = "WebSocket client & server library, WAMP real-time framework"
@@ -90,18 +82,6 @@ cryptography = ">=2.7"
 six = ">=1.11.0"
 txaio = ">=18.8.1"
 
-[package.extras]
-accelerate = ["wsaccel (>=0.6.2)"]
-all = ["zope.interface (>=3.6.0)", "Twisted (>=12.1.0)", "wsaccel (>=0.6.2)", "python-snappy (>=0.5)", "lz4 (>=0.7.0)", "msgpack (>=0.6.1)", "ujson (>=1.35)", "cbor2 (>=4.1.2)", "cbor (>=1.0.0)", "py-ubjson (>=0.8.4)", "flatbuffers (>=1.10)", "pyopenssl (>=16.2.0)", "service-identity (>=16.0.0)", "pynacl (>=1.0.1)", "pytrie (>=0.2)", "pyqrcode (>=1.1)", "cffi (>=1.11.5)", "argon2-cffi (>=18.1.0)", "passlib (>=1.7.1)", "cbor2 (>=4.1.1)", "zlmdb (>=18.12.1)", "twisted (>=18.9.0)", "autobahn (>=18.11.2)", "web3 (>=4.8.1)"]
-compress = ["python-snappy (>=0.5)", "lz4 (>=0.7.0)"]
-dev = ["pep8-naming (>=0.3.3)", "flake8 (>=2.5.1)", "pyflakes (>=1.0.0)", "mock (>=1.3.0)", "pytest (>=2.8.6,<3.3.0)", "twine (>=1.6.5)", "sphinx (>=1.2.3)", "pyenchant (>=1.6.6)", "sphinxcontrib-spelling (>=2.1.2)", "sphinx-rtd-theme (>=0.1.9)", "awscli", "qualname", "passlib", "wheel", "pytest-asyncio (<0.6)", "pytest-aiohttp"]
-encryption = ["pyopenssl (>=16.2.0)", "service-identity (>=16.0.0)", "pynacl (>=1.0.1)", "pytrie (>=0.2)", "pyqrcode (>=1.1)"]
-nvx = ["cffi (>=1.11.5)"]
-scram = ["cffi (>=1.11.5)", "argon2-cffi (>=18.1.0)", "passlib (>=1.7.1)"]
-serialization = ["msgpack (>=0.6.1)", "ujson (>=1.35)", "cbor2 (>=4.1.2)", "cbor (>=1.0.0)", "py-ubjson (>=0.8.4)", "flatbuffers (>=1.10)"]
-twisted = ["zope.interface (>=3.6.0)", "Twisted (>=12.1.0)"]
-xbr = ["cbor2 (>=4.1.1)", "zlmdb (>=18.12.1)", "twisted (>=18.9.0)", "autobahn (>=18.11.2)", "web3 (>=4.8.1)"]
-
 [[package]]
 category = "main"
 description = "Self-service finite-state machines for the programmer on the go."
@@ -113,9 +93,6 @@ version = "0.7.0"
 [package.dependencies]
 attrs = ">=16.1.0"
 six = "*"
-
-[package.extras]
-visualize = ["graphviz (>0.5.1)", "Twisted (>=16.1.1)"]
 
 [[package]]
 category = "dev"
@@ -130,9 +107,6 @@ appdirs = "*"
 attrs = ">=18.1.0"
 click = ">=6.5"
 toml = ">=0.9.4"
-
-[package.extras]
-d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
 
 [[package]]
 category = "main"
@@ -157,9 +131,6 @@ version = "2.2.0"
 Django = ">=1.11"
 asgiref = ">=3.0,<4.0"
 daphne = ">=2.3,<3.0"
-
-[package.extras]
-tests = ["pytest (>=3.6.0,<3.7.0)", "pytest-django (>=3.1,<4.0)", "pytest-asyncio (>=0.8,<1.0)", "async-generator (>=1.8,<2.0)", "async-timeout (>=2.0,<3.0)", "coverage (>=4.4,<5.0)"]
 
 [[package]]
 category = "main"
@@ -199,13 +170,6 @@ asn1crypto = ">=0.21.0"
 cffi = ">=1.8,<1.11.3 || >1.11.3"
 six = ">=1.4.1"
 
-[package.extras]
-docs = ["sphinx (>=1.6.5,<1.8.0 || >1.8.0)", "sphinx-rtd-theme"]
-docstest = ["doc8", "pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
-idna = ["idna (>=2.1)"]
-pep8test = ["flake8", "flake8-import-order", "pep8-naming"]
-test = ["pytest (>=3.6.0,<3.9.0 || >3.9.0,<3.9.1 || >3.9.1,<3.9.2 || >3.9.2)", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,<3.79.2 || >3.79.2)"]
-
 [[package]]
 category = "main"
 description = "Django ASGI (HTTP/WebSocket) server"
@@ -219,24 +183,17 @@ asgiref = ">=3.0,<4.0"
 autobahn = ">=0.18"
 twisted = ">=18.7"
 
-[package.extras]
-tests = ["hypothesis (>=3.88,<4.0)", "pytest (>=3.10,<4.0)", "pytest-asyncio (>=0.8,<1.0)"]
-
 [[package]]
 category = "main"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 name = "django"
 optional = false
 python-versions = ">=3.5"
-version = "2.2.3"
+version = "2.2.4"
 
 [package.dependencies]
 pytz = "*"
 sqlparse = "*"
-
-[package.extras]
-argon2 = ["argon2-cffi (>=16.1.0)"]
-bcrypt = ["bcrypt"]
 
 [[package]]
 category = "main"
@@ -290,9 +247,6 @@ optional = false
 python-versions = "*"
 version = "17.5.0"
 
-[package.extras]
-scripts = ["click (>=6.0)", "twisted (>=16.4.0)"]
-
 [[package]]
 category = "dev"
 description = "A Python utility / library to sort Python imports."
@@ -300,12 +254,6 @@ name = "isort"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "4.3.20"
-
-[package.extras]
-pipfile = ["pipreqs", "requirementslib"]
-pyproject = ["toml"]
-requirements = ["pipreqs", "pip-api"]
-xdg_home = ["appdirs (>=1.4.0)"]
 
 [[package]]
 category = "dev"
@@ -328,7 +276,7 @@ category = "main"
 description = "C parser in Python"
 name = "pycparser"
 optional = false
-python-versions = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.19"
 
 [[package]]
@@ -400,9 +348,6 @@ optional = false
 python-versions = ">=3.6"
 version = "0.12.0"
 
-[package.extras]
-full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests", "ujson"]
-
 [[package]]
 category = "dev"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -428,18 +373,6 @@ hyperlink = ">=17.1.1"
 incremental = ">=16.10.1"
 "zope.interface" = ">=4.4.2"
 
-[package.extras]
-all_non_platform = ["pyopenssl (>=16.0.0)", "service_identity (>=18.1.0)", "idna (>=0.6,<2.3 || >2.3)", "pyasn1", "cryptography (>=2.5)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)", "soappy", "pyserial (>=3.0)", "h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)"]
-conch = ["pyasn1", "cryptography (>=2.5)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)"]
-dev = ["pyflakes (>=1.0.0)", "twisted-dev-tools (>=0.0.2)", "python-subunit", "sphinx (>=1.3.1)", "towncrier (>=17.4.0)", "twistedchecker (>=0.4.0)", "pydoctor (>=16.2.0)"]
-http2 = ["h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)"]
-macos_platform = ["pyobjc-core", "pyobjc-framework-cfnetwork", "pyobjc-framework-cocoa", "pyopenssl (>=16.0.0)", "service_identity (>=18.1.0)", "idna (>=0.6,<2.3 || >2.3)", "pyasn1", "cryptography (>=2.5)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)", "soappy", "pyserial (>=3.0)", "h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)"]
-osx_platform = ["pyobjc-core", "pyobjc-framework-cfnetwork", "pyobjc-framework-cocoa", "pyopenssl (>=16.0.0)", "service_identity (>=18.1.0)", "idna (>=0.6,<2.3 || >2.3)", "pyasn1", "cryptography (>=2.5)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)", "soappy", "pyserial (>=3.0)", "h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)"]
-serial = ["pyserial (>=3.0)"]
-soap = ["soappy"]
-tls = ["pyopenssl (>=16.0.0)", "service_identity (>=18.1.0)", "idna (>=0.6,<2.3 || >2.3)"]
-windows_platform = ["pywin32", "pyopenssl (>=16.0.0)", "service_identity (>=18.1.0)", "idna (>=0.6,<2.3 || >2.3)", "pyasn1", "cryptography (>=2.5)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)", "soappy", "pyserial (>=3.0)", "h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)"]
-
 [[package]]
 category = "main"
 description = "Compatibility API between asyncio/Twisted/Trollius"
@@ -450,11 +383,6 @@ version = "18.8.1"
 
 [package.dependencies]
 six = "*"
-
-[package.extras]
-all = ["zope.interface (>=3.6)", "twisted (>=12.1.0)"]
-dev = ["wheel", "pytest (>=2.6.4)", "pytest-cov (>=1.8.1)", "pep8 (>=1.6.2)", "sphinx (>=1.2.3)", "pyenchant (>=1.6.6)", "sphinxcontrib-spelling (>=2.1.2)", "sphinx-rtd-theme (>=0.1.9)", "tox (>=2.1.1)", "mock (1.3.0)", "twine (>=1.6.5)"]
-twisted = ["zope.interface (>=3.6)", "twisted (>=12.1.0)"]
 
 [[package]]
 category = "dev"
@@ -535,11 +463,6 @@ version = "4.6.0"
 [package.dependencies]
 setuptools = "*"
 
-[package.extras]
-docs = ["sphinx", "repoze.sphinx.autointerface"]
-test = ["zope.event"]
-testing = ["zope.event", "nose", "coverage"]
-
 [metadata]
 content-hash = "26f7415d3305540460d4a288b1abca8a405ecdda688dedcc91350d4500733fe8"
 python-versions = "^3.6"
@@ -562,7 +485,7 @@ colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", 
 constantly = ["586372eb92059873e29eba4f9dec8381541b4d3834660707faf8ba59146dfc35", "dd2fa9d6b1a51a83f0d7dd76293d734046aa176e384bf6e33b7e44880eb37c5d"]
 cryptography = ["24b61e5fcb506424d3ec4e18bca995833839bf13c59fc43e530e488f28d46b8c", "25dd1581a183e9e7a806fe0543f485103232f940fcfc301db65e630512cce643", "3452bba7c21c69f2df772762be0066c7ed5dc65df494a1d53a58b683a83e1216", "41a0be220dd1ed9e998f5891948306eb8c812b512dc398e5a01846d855050799", "5751d8a11b956fbfa314f6553d186b94aa70fdb03d8a4d4f1c82dcacf0cbe28a", "5f61c7d749048fa6e3322258b4263463bfccefecb0dd731b6561cb617a1d9bb9", "72e24c521fa2106f19623a3851e9f89ddfdeb9ac63871c7643790f872a305dfc", "7b97ae6ef5cba2e3bb14256625423413d5ce8d1abb91d4f29b6d1a081da765f8", "961e886d8a3590fd2c723cf07be14e2a91cf53c25f02435c04d39e90780e3b53", "96d8473848e984184b6728e2c9d391482008646276c3ff084a1bd89e15ff53a1", "ae536da50c7ad1e002c3eee101871d93abdc90d9c5f651818450a0d3af718609", "b0db0cecf396033abb4a93c95d1602f268b3a68bb0a9cc06a7cff587bb9a7292", "cfee9164954c186b191b91d4193989ca994703b2fff406f71cf454a2d3c7327e", "e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6", "f27d93f0139a3c056172ebb5d4f9056e770fdf0206c2f422ff2ebbad142e09ed", "f57b76e46a58b63d1c6375017f4564a28f19a5ca912691fd2e4261b3414b618d"]
 daphne = ["2329b7a74b5559f7ea012879c10ba945c3a53df7d8d2b5932a904e3b4c9abcc2", "3cae286a995ae5b127d7de84916f0480cb5be19f81125b6a150b8326250dadd5"]
-django = ["4d23f61b26892bac785f07401bc38cbf8fa4cec993f400e9cd9ddf28fd51c0ea", "6e974d4b57e3b29e4882b244d40171d6a75202ab8d2402b8e8adbd182e25cf0c"]
+django = ["16a5d54411599780ac9dfe3b9b38f90f785c51259a584e0b24b6f14a7f69aae8", "9a2f98211ab474c710fcdad29c82f30fc14ce9917c7a70c3682162a624de4035"]
 graphql-core-next = ["5a6cdf23a3b24fa738a903b9fcdaa1db2768a6552f8d1fb8fb79d9add16d090d", "c663ccc36d9a5ece606b5b4f5509835f0ec8d6e6b941992ced67384edcbfd045"]
 h11 = ["acca6a44cb52a32ab442b1779adf0875c443c689e9e028f8d831a3769f9c5208", "f2b1ca39bfed357d1f19ac732913d5f9faa54a5062eca7d2ec3a916cfb7ae4c7"]
 httptools = ["e00cbd7ba01ff748e494248183abc6e153f49181169d8a3d41bb49132ca01dfc"]
