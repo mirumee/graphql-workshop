@@ -5,6 +5,7 @@ license = "BSD-3-Clause"
 authors = [
     "Mirumee Software <hello@mirumee.com>"
 ]
+description = "A GraphQL workshop"
 
 [tool.poetry.dependencies]
 python = "^3.6"
